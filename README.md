@@ -2,6 +2,12 @@
 
 Sistema de controle de produção industrial desenvolvido com **React**, **TypeScript** e **Redux Toolkit**. Interface moderna e responsiva para gerenciamento de produtos, matérias-primas e capacidade de produção.
 
+## 🔧 Backend
+
+O backend deste sistema está disponível em um repositório separado:
+
+📦 **Repositório:** [sistema-controle-producao-backend](https://github.com/Arthur-Luiz19/sistema-controle-producao-backend)
+
 ## Sobre o Projeto
 
 Este frontend faz parte de um sistema completo de controle de produção industrial. A interface permite gerenciar produtos, matérias-primas e calcular a capacidade de produção baseada no estoque disponível.
