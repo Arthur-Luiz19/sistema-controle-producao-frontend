@@ -1,74 +1,77 @@
-# React + TypeScript + Vite
+# Sistema de controle de produção - frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sistema de controle de produção industrial desenvolvido com **React**, **TypeScript** e **Redux Toolkit**. Interface moderna e responsiva para gerenciamento de produtos, matérias-primas e capacidade de produção.
 
-Currently, two official plugins are available:
+## Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este frontend faz parte de um sistema completo de controle de produção industrial. A interface permite gerenciar produtos, matérias-primas e calcular a capacidade de produção baseada no estoque disponível.
 
-## React Compiler
+### ✨ Funcionalidades Principais
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Funcionalidade | Descrição |
+|----------------|-----------|
+| CRUD de Produtos | Interface completa para criar, editar, visualizar e excluir produtos |
+| CRUD de Matérias-Primas | Gerenciamento de insumos com controle de quantidade em estoque |
+| Associações | Vinculação de matérias-primas aos produtos com quantidades necessárias |
+| Capacidade de Produção | Visualização de quantos produtos podem ser fabricados com o estoque atual |
+| Registro de Produção | Interface para registrar produção com baixa automática de estoque |
+| Responsividade | Layout adaptável para desktop, tablet e mobile |
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Tecnologia | Finalidade |
+|------------|------------|
+| React | Biblioteca UI |
+| TypeScript | Linguagem tipada |
+| Redux Toolkit | Gerenciamento de estado |
+| RTK Query | Cache e fetch de dados |
+| Vite | Build tool e dev server |
+| TailwindCSS | Estilização utilitária |
+| React Router | Roteamento |
+| Vitest | Framework de testes |
+| React Testing Library | Testes de componentes |
+| ESLint | Linting de código |
+| Prettier | Formatação de código |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📋 Pré-requisitos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Antes de começar, certifique-se de ter instalado:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (versão 18 ou superior)
+- npm ou yarn
+- Backend rodando em `http://localhost:3000`
+
+### Verificar Instalação
+
+```bash
+node --version    # Deve retornar v18.x ou superior
+npm --version     # Deve retornar 8.x ou superior
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧪 Testes
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Testes Unitários (Vitest)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Rodar todos os testes
+npm run test
+
+# Rodar em modo watch
+npm run test -- --watch
+
+# Rodar com coverage
+npm run test -- --coverage
+
+# Rodar com UI
+npm run test -- --ui
 ```
-# gestao_produtos_frontend
+
+## 📫 Contato
+
+| Canal | Link |
+|-------|------|
+| Desenvolvedor | [Arthur Luiz da Silva] |
+| Email | [arthur.luiz11@hotmail.com] |
+| LinkedIn | [linkedin.com/in/arthur-luiz-da-silva](https://linkedin.com/in/arthur-luiz-da-silva) |
+| GitHub | [github.com/Arthur-Luiz19](https://github.com/Arthur-Luiz19) |
+
